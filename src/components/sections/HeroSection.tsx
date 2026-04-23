@@ -82,7 +82,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="relative hidden lg:block p-10"
+            className="relative hidden lg:block"
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-gold/20">
                <img 
@@ -92,35 +92,6 @@ const HeroSection: React.FC = () => {
               />
             </div>
             
-            {/* Floating UI Elements */}
-            <motion.div 
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 right-0 bg-[var(--bg-card)] p-5 rounded-3xl shadow-2xl border border-[var(--border)] flex items-center gap-4 z-20"
-            >
-               <div className="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center text-white">
-                  <PlayCircle className="w-6 h-6" />
-               </div>
-               <div>
-                  <div className="text-sm font-black text-[var(--text-primary)]">{t.hero.badge_live}</div>
-                  <div className="text-[10px] text-[var(--text-muted)]">{t.hero.badge_live_subtitle}</div>
-               </div>
-            </motion.div>
-
-            <motion.div 
-              animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-0 left-0 bg-[var(--bg-card)] p-5 rounded-3xl shadow-2xl border border-[var(--border)] flex items-center gap-4 z-20"
-            >
-               <div className="w-12 h-12 bg-gold rounded-2xl flex items-center justify-center text-white">
-                  <PlayCircle className="w-6 h-6" />
-               </div>
-               <div>
-                  <div className="text-sm font-black text-[var(--text-primary)]">{t.hero.badge_courses}</div>
-                  <div className="text-[10px] text-[var(--text-muted)]">{t.hero.badge_courses_subtitle}</div>
-               </div>
-            </motion.div>
-
             {/* Geometric Glow */}
             <div className="absolute inset-0 bg-gold/20 blur-[100px] -z-10 rounded-full" />
           </motion.div>
