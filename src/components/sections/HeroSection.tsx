@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { useLanguage } from '../../context';
-import { PlayCircle, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const { t, isRtl } = useLanguage();
