@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand */
+  --gold: #D4A847;
+  --gold-light: #F0C96B;
+  --gold-dark: #A07A20;
+
+  /* Light Mode */
+  --bg-primary: #FAFAF8;
+  --bg-secondary: #F2EDE4;
+  --bg-card: #FFFFFF;
+  --text-primary: #1A1208;
+  --text-secondary: #6B5C3E;
+  --text-muted: #9B8A6E;
+  --border: #E8DCC8;
+}
+
+.dark {
+  /* Dark Mode */
+  --bg-primary: #0D0B08;
+  --bg-secondary: #161310;
+  --bg-card: #1E1A14;
+  --text-primary: #F5EDD8;
+  --text-secondary: #C8B896;
+  --text-muted: #9B8A6E; /* Kept same as light or slightly adjusted */
+  --border: #2E2518;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--bg-primary)];
+  }
+}
+
+@layer components {
+  /* Warm luxury editorial feel */
+  .card-premium {
+    @apply bg-[var(--bg-card)] border border-[var(--border)] rounded-xl overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-gold {
+    @apply bg-gold hover:bg-gold-dark text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-gold/20;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold text-gold hover:bg-gold hover:text-white font-bold py-2 px-6 rounded-lg transition-all duration-300;
+  }
+}
+
+/* Islamic geometric pattern texture */
+.bg-islamic {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5.878 18.09h19.022L39.439 29.27 45.317 47.36 30 36.18 14.683 47.36l5.878-18.09L5.1 18.09h19.022L30 0z' fill='%23D4A847' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
